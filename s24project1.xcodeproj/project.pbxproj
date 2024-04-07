@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C130CA2C2BC2124E00F4F2DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C130CA2B2BC2124E00F4F2DB /* main.cpp */; };
+		C130CA342BC2341A00F4F2DB /* Tooter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C130CA322BC2341A00F4F2DB /* Tooter.cpp */; };
+		C130CA372BC2343500F4F2DB /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C130CA352BC2343500F4F2DB /* Player.cpp */; };
+		C130CA3A2BC2385600F4F2DB /* History.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C130CA382BC2385600F4F2DB /* History.cpp */; };
+		C130CA3D2BC2386E00F4F2DB /* City.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C130CA3B2BC2386E00F4F2DB /* City.cpp */; };
+		C130CA402BC2388F00F4F2DB /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C130CA3E2BC2388F00F4F2DB /* Game.cpp */; };
+		C130CA422BC238B500F4F2DB /* utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C130CA412BC238B500F4F2DB /* utilities.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,18 @@
 /* Begin PBXFileReference section */
 		C130CA282BC2124E00F4F2DB /* s24project1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = s24project1; sourceTree = BUILT_PRODUCTS_DIR; };
 		C130CA2B2BC2124E00F4F2DB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C130CA322BC2341A00F4F2DB /* Tooter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tooter.cpp; sourceTree = "<group>"; };
+		C130CA332BC2341A00F4F2DB /* Tooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tooter.h; sourceTree = "<group>"; };
+		C130CA352BC2343500F4F2DB /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		C130CA362BC2343500F4F2DB /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		C130CA382BC2385600F4F2DB /* History.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = History.cpp; sourceTree = "<group>"; };
+		C130CA392BC2385600F4F2DB /* History.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
+		C130CA3B2BC2386E00F4F2DB /* City.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = City.cpp; sourceTree = "<group>"; };
+		C130CA3C2BC2386E00F4F2DB /* City.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		C130CA3E2BC2388F00F4F2DB /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		C130CA3F2BC2388F00F4F2DB /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		C130CA412BC238B500F4F2DB /* utilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utilities.cpp; sourceTree = "<group>"; };
+		C130CA432BC238CF00F4F2DB /* globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,18 @@
 			isa = PBXGroup;
 			children = (
 				C130CA2B2BC2124E00F4F2DB /* main.cpp */,
+				C130CA322BC2341A00F4F2DB /* Tooter.cpp */,
+				C130CA352BC2343500F4F2DB /* Player.cpp */,
+				C130CA382BC2385600F4F2DB /* History.cpp */,
+				C130CA3B2BC2386E00F4F2DB /* City.cpp */,
+				C130CA3E2BC2388F00F4F2DB /* Game.cpp */,
+				C130CA412BC238B500F4F2DB /* utilities.cpp */,
+				C130CA332BC2341A00F4F2DB /* Tooter.h */,
+				C130CA362BC2343500F4F2DB /* Player.h */,
+				C130CA392BC2385600F4F2DB /* History.h */,
+				C130CA3C2BC2386E00F4F2DB /* City.h */,
+				C130CA3F2BC2388F00F4F2DB /* Game.h */,
+				C130CA432BC238CF00F4F2DB /* globals.h */,
 			);
 			path = s24project1;
 			sourceTree = "<group>";
@@ -119,7 +149,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C130CA342BC2341A00F4F2DB /* Tooter.cpp in Sources */,
 				C130CA2C2BC2124E00F4F2DB /* main.cpp in Sources */,
+				C130CA3A2BC2385600F4F2DB /* History.cpp in Sources */,
+				C130CA402BC2388F00F4F2DB /* Game.cpp in Sources */,
+				C130CA372BC2343500F4F2DB /* Player.cpp in Sources */,
+				C130CA422BC238B500F4F2DB /* utilities.cpp in Sources */,
+				C130CA3D2BC2386E00F4F2DB /* City.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

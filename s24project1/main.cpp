@@ -5,8 +5,6 @@
 //  Created by Cameron Maiden on 4/6/24.
 //
 
-// toot.cpp
-
 #include <iostream>
 #include <string>
 #include <random>
@@ -605,6 +603,7 @@ int main()
       // Play the game
     g.play();
 }
+
 
 ///////////////////////////////////////////////////////////////////////////
 //  clearScreen implementation
