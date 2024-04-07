@@ -18,73 +18,8 @@ using namespace std;
 #include "Tooter.h"
 #include "Player.h"
 #include "City.h"
+#include "Game.h"
 
-class Game
-{
-  public:
-        // Constructor/destructor
-    Game(int rows, int cols, int nTooters);
-    ~Game();
-
-        // Mutators
-    void play();
-
-  private:
-    City* m_city;
-};
-
-///////////////////////////////////////////////////////////////////////////
-//  Auxiliary function declarations
-///////////////////////////////////////////////////////////////////////////
-
-int decodeDirection(char dir);
-int randInt(int min, int max);
-void clearScreen();
-
-///////////////////////////////////////////////////////////////////////////
-//  Tooter implementation
-///////////////////////////////////////////////////////////////////////////
-
-Tooter::Tooter(City* cp, int r, int c)
- : m_city(cp), m_row(r), m_col(c)
-{
-    if (cp == nullptr)
-    {
-        cout << "***** A Tooter must be created in some City!" << endl;
-        exit(1);
-    }
-    if (r < 1  ||  r > cp->rows()  ||  c < 1  ||  c > cp->cols())
-    {
-        cout << "***** Tooter created with invalid coordinates (" << r << ","
-             << c << ")!" << endl;
-        exit(1);
-    }
-}
-
-int Tooter::row() const
-{
-    return m_row;
-}
-
-int Tooter::col() const
-{
-    return m_col;
-}
-
-void Tooter::move()
-{
-      // Attempt a move in a random direction; if it can't move, don't move.
-      // If player is there, don't move.
-    int dir = randInt(0, NUMDIRS-1);  // dir is now UP, DOWN, LEFT, or RIGHT
-    int r = m_row;
-    int c = m_col;
-    m_city->determineNewPosition(r, c, dir);
-    if ( ! m_city->isPlayerAt(r, c))
-    {
-        m_row = r;
-        m_col = c;
-    }
-}
 
 ///////////////////////////////////////////////////////////////////////////
 //  Player implementations
@@ -469,32 +404,6 @@ void Game::play()
         cout << "You win." << endl;
 }
 
-///////////////////////////////////////////////////////////////////////////
-//  Auxiliary function implementations
-///////////////////////////////////////////////////////////////////////////
-
-int decodeDirection(char dir)
-{
-    switch (dir)
-    {
-      case 'u':  return UP;
-      case 'd':  return DOWN;
-      case 'l':  return LEFT;
-      case 'r':  return RIGHT;
-    }
-    return -1;  // bad argument passed in!
-}
-
-  // Return a uniformly distributed random int from min to max, inclusive
-int randInt(int min, int max)
-{
-    if (max < min)
-        swap(max, min);
-    static random_device rdv;
-    static default_random_engine generator(rdv());
-    uniform_int_distribution<> distro(min, max);
-    return distro(generator);
-}
 
 ///////////////////////////////////////////////////////////////////////////
 //  main()
@@ -540,54 +449,3 @@ int main()
 //    }
 
 
-///////////////////////////////////////////////////////////////////////////
-//  clearScreen implementation
-///////////////////////////////////////////////////////////////////////////
-
-// YOU MAY MOVE TO ANOTHER FILE ALL THE CODE FROM HERE TO THE END OF THIS FILE,
-// BUT BE SURE TO MOVE *ALL* THE CODE AS IS; DON'T REMOVE OR MODIFY ANY #IFDEF,
-// ETC.  THE CODE IS SUITABLE FOR VISUAL C++, XCODE, AND g++/g31/g32 UNDER LINUX.
-
-// Note to Xcode users:  clearScreen() will just write a newline instead
-// of clearing the window if you launch your program from within Xcode.
-// That's acceptable.  (The Xcode output window doesn't have the capability
-// of being cleared.)
-
-#ifdef _WIN32  //  Windows
-
-#pragma warning(disable : 4005)
-#include <windows.h>
-
-void clearScreen()
-{
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    CONSOLE_SCREEN_BUFFER_INFO csbi;
-    GetConsoleScreenBufferInfo(hConsole, &csbi);
-    DWORD dwConSize = csbi.dwSize.X * csbi.dwSize.Y;
-    COORD upperLeft = { 0, 0 };
-    DWORD dwCharsWritten;
-    FillConsoleOutputCharacter(hConsole, TCHAR(' '), dwConSize, upperLeft,
-                                                        &dwCharsWritten);
-    SetConsoleCursorPosition(hConsole, upperLeft);
-}
-
-#else  // not Microsoft Visual C++, so assume UNIX interface
-
-#include <iostream>
-#include <cstring>
-#include <cstdlib>
-using namespace std;
-
-void clearScreen()  // will just write a newline in an Xcode output window
-{
-    static const char* term = getenv("TERM");
-    if (term == nullptr  ||  strcmp(term, "dumb") == 0)
-        cout << endl;
-    else
-    {
-        static const char* ESC_SEQ = "\x1B[";  // ANSI Terminal esc seq:  ESC [
-        cout << ESC_SEQ << "2J" << ESC_SEQ << "H" << flush;
-    }
-}
-
-#endif

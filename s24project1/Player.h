@@ -13,7 +13,7 @@
 ///////////////////////////////////////////////////////////////////////////
 
 class City;  // This is needed to let the compiler know that City is a
-             // type name, since it's mentioned in the Tooter declaration.
+             // type name, since it's mentioned in the Player declaration.
 
 class Player
 {
