@@ -30,36 +30,8 @@ const int NUMDIRS = 4;
 ///////////////////////////////////////////////////////////////////////////
 // Type definitions
 ///////////////////////////////////////////////////////////////////////////
-
 #include "Tooter.h"
-class City;  // This is needed to let the compiler know that City is a
-             // type name, since it's mentioned in the Tooter declaration.
-
-class Player
-{
-  public:
-        // Constructor
-    Player(City *cp, int r, int c);
-
-        // Accessors
-    int  row() const;
-    int  col() const;
-    int  age() const;
-    int  health() const;
-    bool isPassedOut() const;
-
-        // Mutators
-    void  preach();
-    void  move(int dir);
-    void  getGassed();
-
-  private:
-    City* m_city;
-    int   m_row;
-    int   m_col;
-    int   m_health;
-    int   m_age;
-};
+#include "Player.h"
 
 class City
 {
@@ -586,6 +558,27 @@ int main()
     g.play();
 }
 
+
+///////////////////////////////////////////////////////////////////////////
+//  Test Cases
+///////////////////////////////////////////////////////////////////////////
+
+// If we replace your main.cpp file with the following, the program must build successfully under both g32 and either Visual C++ or clang++:
+//#include "Tooter.h"
+//#include "Game.h"
+//#include "City.h"
+//#include "History.h"
+//#include "Player.h"
+//#include "globals.h"
+//    int main()
+//    {}
+
+//#include "Tooter.h"
+//int main()
+//{
+//    if (false)  // so that this test builds, but does not write anything
+//        Tooter t(nullptr, 1, 1);
+//}
 
 ///////////////////////////////////////////////////////////////////////////
 //  clearScreen implementation
