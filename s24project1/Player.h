@@ -42,4 +42,4 @@ class Player
 };
 
 
-#endif /* Player_hpp */
+#endif /* Player_h */

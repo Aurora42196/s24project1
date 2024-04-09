@@ -34,4 +34,4 @@ class Tooter
     int   m_col;
 };
 
-#endif /* Tooter_hpp */
+#endif /* Tooter_h */

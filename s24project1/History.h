@@ -12,14 +12,22 @@
 // Type definitions
 ///////////////////////////////////////////////////////////////////////////
 
+class City;
+
 class History
 {
     public:
         History(int nRows, int nCols);
         bool record(int r, int c);
         void display() const;
+    
     private:
-        
+        int m_rows;
+        int m_cols;
+        City* cp;
+    
+            // Helper functions
+        bool isInBounds(int r, int c) const;
 };
 
-#endif /* History_hpp */
+#endif /* History_h */

@@ -29,4 +29,4 @@ class Game
     City* m_city;
 };
 
-#endif /* Game_hpp */
+#endif /* Game_h */

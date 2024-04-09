@@ -149,6 +149,12 @@ void City::display() const
     }
 }
 
+//History& history()
+//{
+//    History* hp = &m_history;
+//    return hp;
+//}
+
 bool City::addTooter(int r, int c)
 {
     if ( ! isInBounds(r, c))
