@@ -12,8 +12,6 @@
 // Type definitions
 ///////////////////////////////////////////////////////////////////////////
 
-class City;
-
 class History
 {
     public:
@@ -24,7 +22,7 @@ class History
     private:
         int m_rows;
         int m_cols;
-        City* cp;
+        
     
             // Helper functions
         bool isInBounds(int r, int c) const;

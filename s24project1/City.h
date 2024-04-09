@@ -48,7 +48,7 @@ class City
     Player* m_player;
     Tooter* m_tooters[MAXTOOTERS];
     int     m_nTooters;
-    History m_history(int rows, int cols);
+    History m_history;
 
       // Helper functions
     bool isInBounds(int r, int c) const;

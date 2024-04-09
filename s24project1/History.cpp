@@ -30,9 +30,29 @@ bool History::record(int r, int c)
 void History::display() const
 {
     cerr << "History display() function called!" << endl;
-    clearScreen();
     
+    // Position (row,col) in the city coordinate system is represented in
+    // the array element grid[row-1][col-1]
+    char grid[MAXROWS][MAXCOLS];
+    int r, c;
+  
+      // Fill the grid with dots
+    for (r = 0; r < m_rows; r++)
+        for (c = 0; c < m_cols; c++)
+            grid[r][c] = '.';
+    
+    // Draw the grid
+    clearScreen();
     cerr << "The screen has been cleared!" << endl;
+    
+    for (r = 0; r < m_rows; r++)
+    {
+        for (c = 0; c < m_cols; c++)
+            cout << grid[r][c];
+        cout << endl;
+    }
+    cout << endl;
+    
 }
 
 bool History::isInBounds(int r, int c) const

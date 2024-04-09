@@ -10,6 +10,7 @@
 #include "City.h"
 #include "Player.h"
 #include "Tooter.h"
+#include "History.h"
 
 using namespace std;
 
@@ -18,7 +19,7 @@ using namespace std;
 ///////////////////////////////////////////////////////////////////////////
 
 City::City(int nRows, int nCols)
- : m_rows(nRows), m_cols(nCols), m_player(nullptr), m_nTooters(0)
+ : m_rows(nRows), m_cols(nCols), m_player(nullptr), m_nTooters(0), m_history(nRows, nCols)
 {
     if (nRows <= 0  ||  nCols <= 0  ||  nRows > MAXROWS  ||  nCols > MAXCOLS)
     {
@@ -149,11 +150,10 @@ void City::display() const
     }
 }
 
-//History& history()
-//{
-//    History* hp = &m_history;
-//    return hp;
-//}
+History& City::history()
+{
+    return m_history;
+}
 
 bool City::addTooter(int r, int c)
 {
