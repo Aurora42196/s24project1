@@ -6,6 +6,7 @@
 //
 
 #include <iostream>
+#include <cstdlib>
 #include "Game.h"
 #include "City.h"
 #include "Player.h"

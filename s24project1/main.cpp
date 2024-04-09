@@ -4,14 +4,6 @@
 //
 //  Created by Cameron Maiden on 4/6/24.
 //
-
-//#include <iostream>
-//#include <string>
-//#include <random>
-//#include <utility>
-//#include <cstdlib>
-//using namespace std;
-
 ///////////////////////////////////////////////////////////////////////////
 //  Project 1 big bag o' test cases
 ///////////////////////////////////////////////////////////////////////////
@@ -22,7 +14,7 @@
 // that integer.  (For any other integer, it will use the original code that
 // plays the game.)  Here is the line to uncomment:
 
-// #define TESTNUM 1
+// #define TESTNUM 15
 
 // (If you know how to specify a value for TESTNUM at the time you invoke the
 // compiler, using either a project setting in Visual C++ or Xcode or by
@@ -172,6 +164,7 @@ This must produce exactly three lines of output:
 #include "City.h"
 #include "History.h"
 #include <iostream>
+#include <cassert>
 using namespace std;
 
 int main()
