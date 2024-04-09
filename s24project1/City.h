@@ -9,6 +9,7 @@
 #define City_h
 
 #include "globals.h"
+#include "History.h"
 
 ///////////////////////////////////////////////////////////////////////////
 // Type definitions
@@ -33,6 +34,7 @@ class City
     int     nTootersAt(int r, int c) const;
     bool    determineNewPosition(int& r, int& c, int dir) const;
     void    display() const;
+    History& history(); // returns a reference to the City's History object
 
         // Mutators
     bool addTooter(int r, int c);
