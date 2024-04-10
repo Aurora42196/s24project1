@@ -15,7 +15,7 @@ using namespace std;
 History::History(int nRows, int nCols)
  : m_rows(nRows), m_cols(nCols)
 {
-    cerr << "History constructor called!" << endl;
+    //cerr << "History constructor called!" << endl;
 }
 
 
@@ -31,7 +31,7 @@ bool History::record(int r, int c)
 
 void History::display() const
 {
-    cerr << "History::display() function called!" << endl;
+    //cerr << "History::display() function called!" << endl;
     
     // Position (row,col) in the city coordinate system is represented in
     // the array element grid[row-1][col-1]
@@ -58,7 +58,6 @@ void History::display() const
             else if (recordArr[r][c] >= 26)
             {
                 grid[r][c] = 'Z';
-//                continue;
             }
         }
         cout << endl;
@@ -67,7 +66,7 @@ void History::display() const
     
     // Draw the grid
     clearScreen();
-    cerr << "The screen has been cleared!" << endl;
+//    cerr << "The screen has been cleared!" << endl;
     
     for (r = 0; r < m_rows; r++)
     {

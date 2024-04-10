@@ -7,7 +7,6 @@
 ///////////////////////////////////////////////////////////////////////////
 //  Project 1 big bag o' test cases
 ///////////////////////////////////////////////////////////////////////////
-
 // If you uncomment the #define line immediately below this comment and
 // replace the integer with an integer in the range 1 to 20, when you build
 // the program, the compiler will select the code below corresponding to
