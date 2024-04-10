@@ -14,7 +14,7 @@
 // that integer.  (For any other integer, it will use the original code that
 // plays the game.)  Here is the line to uncomment:
 
-// #define TESTNUM 3
+ #define TESTNUM 15
 
 // (If you know how to specify a value for TESTNUM at the time you invoke the
 // compiler, using either a project setting in Visual C++ or Xcode or by
@@ -249,17 +249,21 @@ int main()
 #else  // use original main.cpp
 
 #include "Game.h"
+//#include <iostream>
 
 int main()
 {
       // Create a game
       // Use this instead to create a mini-game:   Game g(3, 4, 2);
     
-//    Game g(7, 8, 25);
-    Game g(3, 4, 2);
+    Game g(7, 8, 25);
+//    Game g(3, 4, 2);
 
       // Play the game
     g.play();
+    
+//    char letter = 65;
+//    std::cout << char (letter + 2) << std::endl;
 }
 
 #endif

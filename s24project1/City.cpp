@@ -210,6 +210,7 @@ void City::preachToTootersAroundPlayer()
             coldiff >= -1  &&  coldiff <= 1  &&
             randInt(1, 3) <= 2)  // 2/3 probability
         {
+            history().record(tp->row(), tp->col());
             delete m_tooters[k];
             m_tooters[k] = m_tooters[m_nTooters-1];
             m_nTooters--;

@@ -8,6 +8,7 @@
 #ifndef History_h
 #define History_h
 
+#include "globals.h"
 ///////////////////////////////////////////////////////////////////////////
 // Type definitions
 ///////////////////////////////////////////////////////////////////////////
@@ -22,7 +23,7 @@ class History
     private:
         int m_rows;
         int m_cols;
-        
+        int recordArr[MAXROWS][MAXCOLS] = {{0}}; 
     
             // Helper functions
         bool isInBounds(int r, int c) const;

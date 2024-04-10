@@ -3,4 +3,70 @@
    uuid = "E5670536-BFE6-4CF4-9AC2-EBC88CF29539"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA6DFB1E-FA94-4E38-9DAF-C1C7381666C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "s24project1/History.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "History::record(r, c)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A8B2E8E-BBCC-42AC-85CC-0AE08E0116FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "s24project1/History.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "History::record(r, c)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7A8B2E8E-BBCC-42AC-85CC-0AE08E0116FF - 1b560d2e71c6b49d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "History::record(int, int)"
+                  moduleName = "s24project1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cameronmaiden/Desktop/Spring%202024/CS%2032/Project%201/s24project1/s24project1/History.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "7A8B2E8E-BBCC-42AC-85CC-0AE08E0116FF - 1b560d2e71c6b49d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "History::record(int, int)"
+                  moduleName = "s24project1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cameronmaiden/Desktop/Spring%202024/CS%2032/Project%201/s24project1/s24project1/History.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -23,13 +23,15 @@ bool History::record(int r, int c)
 {
     if (! isInBounds(r,c))
         return false;
+    else
+        recordArr[r-1][c-1] += 1;
     return true;
 }
 
 
 void History::display() const
 {
-    cerr << "History display() function called!" << endl;
+    cerr << "History::display() function called!" << endl;
     
     // Position (row,col) in the city coordinate system is represented in
     // the array element grid[row-1][col-1]
@@ -41,6 +43,28 @@ void History::display() const
         for (c = 0; c < m_cols; c++)
             grid[r][c] = '.';
     
+    for (r = 0; r < m_rows; r++)
+    {
+        for (c = 0; c < m_cols; c++)
+        {
+            if(recordArr[r][c] == 0)
+            {
+                grid[r][c] = '.';
+            }
+            else if (recordArr[r][c] > 0 && recordArr[r][c] <= 25)
+            {
+                grid[r][c] = 'A' + recordArr[r][c] - 1;
+            }
+            else if (recordArr[r][c] >= 26)
+            {
+                grid[r][c] = 'Z';
+//                continue;
+            }
+        }
+        cout << endl;
+    }
+    cout << endl;
+    
     // Draw the grid
     clearScreen();
     cerr << "The screen has been cleared!" << endl;
@@ -49,6 +73,7 @@ void History::display() const
     {
         for (c = 0; c < m_cols; c++)
             cout << grid[r][c];
+//            cerr << recordArr[r][c];
         cout << endl;
     }
     cout << endl;
