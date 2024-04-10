@@ -13,7 +13,7 @@
 // that integer.  (For any other integer, it will use the original code that
 // plays the game.)  Here is the line to uncomment:
 
- #define TESTNUM 15
+// #define TESTNUM 15
 
 // (If you know how to specify a value for TESTNUM at the time you invoke the
 // compiler, using either a project setting in Visual C++ or Xcode or by
